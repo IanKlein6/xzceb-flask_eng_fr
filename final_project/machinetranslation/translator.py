@@ -1,13 +1,16 @@
+import unittest
 from deep_translator import MyMemoryTranslator
 
+from translator import englishToFrench, frenchToEnglish
 def englishToFrench(englishText):
-    translator = MyMemoryTranslator(source='en-GB', target= 'fr-FR')
-    frenchText = translator.translate(englishText)
+    frenchText = MyMemoryTranslator(source='en-GB', target= 'fr-FR').translate(englishText)
+    print(frenchText)
     return frenchText
 
 
 def frenchToEnglish(frenchText):
-    translator = MyMemoryTranslator(source='fr-FR', target= 'en-GB')
-    englishText = translator.translate(frenchText)
+    englishText = MyMemoryTranslator(source='fr-FR', target= 'en-GB').translate(frenchText)
+    print(englishText)
     return englishText
+
 
