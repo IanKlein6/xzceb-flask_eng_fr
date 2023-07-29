@@ -1,4 +1,3 @@
-import unittest
 from deep_translator import MyMemoryTranslator
 
 def englishToFrench(englishText):

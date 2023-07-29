@@ -4,8 +4,7 @@ let translateToFrench = () => {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            let response = JSON.parse(xhttp.responseText);
-            document.getElementById("translated_text").innerHTML = response.translated_text;
+            document.getElementById("translated_text").innerHTML = xhttp.responseText;
         }
     };
     xhttp.open("GET", "/englishToFrench?textToTranslate=" + encodeURIComponent(textToTranslate), true);
@@ -18,8 +17,7 @@ let translateToEnglish = () => {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            let response = JSON.parse(xhttp.responseText);
-            document.getElementById("translated_text").innerHTML = response.translated_text;
+            document.getElementById("translated_text").innerHTML = xhttp.responseText;
         }
     };
     xhttp.open("GET", "/frenchToEnglish?textToTranslate=" + encodeURIComponent(textToTranslate), true);
